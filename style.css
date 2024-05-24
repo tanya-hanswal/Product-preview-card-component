@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --light-green: hsl(158, 36%, 37%);
+  --dark-green: hsl(158, 59%, 15%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --font-Mont: "Montserrat", sans-serif;
+  --font-Frau: "Fraunces", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--cream);
+}
+.container {
+  background: white;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 9% auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.box img {
+  height: 440px;
+  width: 100%;
+  margin-left: 1px;
+  margin-top: 2px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.content {
+  margin-left: 40px;
+}
+.heading {
+  padding-top: 30px;
+  font-family: var(--font-Mont);
+  letter-spacing: 3px;
+  color: var(--dark-grayish-blue);
+}
+h1 {
+  font-family: var(--font-Frau);
+  color: var(--very-dark-blue);
+  padding-top: 20px;
+  line-height: 100%;
+}
+.para {
+  color: var(--dark-grayish-blue);
+  font-family: var(--font-Mont);
+  word-spacing: 2px;
+  padding-top: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.price {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.new {
+  color: var(--light-green);
+  font-family: var(--font-Frau);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: 20px;
+}
+.old {
+  color: var(--dark-grayish-blue);
+  text-decoration: line-through;
+  font-family: var(--font-Mont);
+  font-size: 14px;
+}
+.btn {
+  background-color: var(--dark-green);
+  width: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.btn a {
+  text-decoration: none;
+  color: white;
+  font-family: var(--font-Mont);
+  font-weight: 600;
+  padding-left: 15px;
+}
+@media (max-width: 889px) {
+  .container {
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin-right: 210px;
+  }
+
+  .box img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0;
+    width: 100%;
+    height: 400px;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+}
